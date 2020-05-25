@@ -1,0 +1,104 @@
+Module                  Size  Used by
+usbhid                 53248  0
+rfcomm                 81920  4
+snd_hda_codec_hdmi     57344  1
+nvidia_uvm            933888  0
+joydev                 28672  0
+nvidia_drm             49152  3
+edac_mce_amd           32768  0
+nvidia_modeset       1114112  7 nvidia_drm
+cmac                   16384  1
+bnep                   24576  2
+ccp                    90112  0
+kvm                   655360  0
+irqbypass              16384  1 kvm
+snd_hda_codec_realtek   118784  1
+snd_hda_codec_generic    81920  1 snd_hda_codec_realtek
+nvidia              20418560  351 nvidia_uvm,nvidia_modeset
+ledtrig_audio          16384  2 snd_hda_codec_generic,snd_hda_codec_realtek
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+nls_iso8859_1          16384  1
+snd_rawmidi            36864  1 snd_seq_midi
+aesni_intel           372736  2
+uvcvideo               94208  0
+aes_x86_64             20480  1 aesni_intel
+v4l2_common            16384  1 uvcvideo
+crypto_simd            16384  1 aesni_intel
+videobuf2_vmalloc      20480  1 uvcvideo
+rtl8821ce            1802240  0
+snd_hda_intel          53248  4
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+videobuf2_memops       20480  1 videobuf2_vmalloc
+glue_helper            16384  1 aesni_intel
+snd_intel_dspcfg       24576  1 snd_hda_intel
+videobuf2_v4l2         24576  1 uvcvideo
+snd_hda_codec         131072  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+btusb                  57344  0
+btrtl                  20480  1 btusb
+btbcm                  16384  1 btusb
+snd_hda_core           90112  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+snd_hwdep              20480  1 snd_hda_codec
+btintel                24576  1 btusb
+bluetooth             573440  33 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+input_leds             16384  0
+asus_nb_wmi            28672  0
+videobuf2_common       49152  2 videobuf2_v4l2,uvcvideo
+asus_wmi               32768  1 asus_nb_wmi
+ecdh_generic           16384  2 bluetooth
+wmi_bmof               16384  0
+hid_multitouch         28672  0
+k10temp                16384  0
+snd_pcm               102400  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+ecc                    32768  1 ecdh_generic
+sparse_keymap          16384  1 asus_wmi
+serio_raw              20480  0
+videodev              208896  4 v4l2_common,videobuf2_v4l2,uvcvideo,videobuf2_common
+cfg80211              704512  1 rtl8821ce
+mc                     53248  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_common
+snd_timer              36864  2 snd_seq,snd_pcm
+snd                    86016  19 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm,snd_rawmidi
+ipmi_devintf           20480  0
+ipmi_msghandler       102400  2 ipmi_devintf,nvidia
+soundcore              16384  1 snd
+asus_wireless          20480  0
+mac_hid                16384  0
+sch_fq_codel           20480  6
+parport_pc             40960  0
+ppdev                  24576  0
+lp                     20480  0
+parport                53248  3 parport_pc,lp,ppdev
+ip_tables              32768  0
+x_tables               40960  1 ip_tables
+autofs4                45056  2
+btrfs                1236992  0
+xor                    24576  1 btrfs
+zstd_compress         163840  1 btrfs
+raid6_pq              114688  1 btrfs
+libcrc32c              16384  1 btrfs
+hid_generic            16384  0
+amdgpu               4112384  1
+amd_iommu_v2           20480  1 amdgpu
+gpu_sched              32768  1 amdgpu
+i2c_algo_bit           16384  1 amdgpu
+ttm                   102400  1 amdgpu
+drm_kms_helper        180224  2 amdgpu,nvidia_drm
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+nvme                   45056  2
+drm                   491520  9 gpu_sched,drm_kms_helper,amdgpu,nvidia_drm,ttm
+r8169                  81920  0
+i2c_piix4              28672  0
+nvme_core             102400  4 nvme
+realtek                20480  1
+wmi                    32768  2 asus_wmi,wmi_bmof
+video                  49152  1 asus_wmi
+i2c_hid                28672  0
+hid                   126976  4 i2c_hid,usbhid,hid_multitouch,hid_generic
